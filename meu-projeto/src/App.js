@@ -1,27 +1,22 @@
-import './App.css';
-import SayMyName from './components/SayMyName';
-import Pessoa from './components/Pessoa';
-import Frase from './components/Frase';
-import List from './components/List';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Empresa from './pages/Empresa';
+import Contato from './pages/Contato';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/FooterU';
 
 function App() {
-  const nome = 'Maria';
   return (
+    <Router>
+      <Navbar />
 
-    <div className="App">
-      <h1>Testando CSS</h1>
-      <Frase />
-      <Frase />
-      <SayMyName nome="Henrique" />
-      <SayMyName nome="Will" />
-      <SayMyName nome={nome} />
-      <Pessoa nome="Henrique"
-        idade="19"
-        profissao="Programador"
-        foto="https.via.placeholder.com/150"
-      />
-      <List />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/empresa" element={<Empresa />} />
+        <Route path="/contato" element={<Contato />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

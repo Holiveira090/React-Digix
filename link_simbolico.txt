@@ -1,0 +1,3 @@
+dentro da pasta que eu quero colocar
+
+mklink /D node_modules ..\calculadora\node_modules
