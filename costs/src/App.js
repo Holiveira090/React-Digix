@@ -1,12 +1,12 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Container from './components/layout/Container';
-import Home from './pages/Home'
 import Company from './pages/Company'
 import Contact from './pages/Contact'
-import Newproject from './pages/NewProject'
 import Footer from './components/layout/Footer'
 import Projects from './pages/Projects';
+import Home from './components/pages/Home';
+import Newproject from './components/pages/NewProject';
 
 
 function App() {
